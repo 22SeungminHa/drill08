@@ -32,9 +32,10 @@ class Ball:
             self.image = load_image('ball21x21.png')
         else:
             self.image = load_image('ball41x41.png')
+        self.v = random.randint(0, 20) + 5
 
     def update(self):
-        self.y -= self.r
+        self.y -= self.v
         if self.y - self.r + 1 < 60:
             self.y = 60 + self.r - 1
 
